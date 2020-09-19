@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .icon {
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header a:hover {
+  color: inherit;
+}
+
+.init-text {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 767px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
