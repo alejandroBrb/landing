@@ -1,30 +1,57 @@
-.header {
-  display: flex;
-  flex-direction: column;
+html {
+  font-family: 'Raleway', sans-serif;
 }
 
-.header .icon {
-  font-size: 1.2rem;
+.container-icons {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container-icons .icon {
+  font-size: 1.5rem;
   margin: 0.5rem 0.5rem;
 }
 
-.header a {
+.container-icons a {
   text-decoration: none;
   color: inherit;
 }
 
-.header a:hover {
+.container-icons a:hover {
   color: inherit;
 }
 
-.init-text {
-  margin-top: 2rem;
+.hero p {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.hero img {
+  border-radius: 60%;
+  margin-top: 5rem;
+  width: 4rem;
+  height: 4rem;
+  color: black;
 }
 
 @media screen and (min-width: 767px) {
-  .header {
-    flex-direction: row;
+  .container-icons {
     align-items: center;
     justify-content: space-between;
+  }
+
+  .hero p {
+    font-size: 4rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: .90;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .hero img {
+    color: white;
   }
 }
