@@ -1,0 +1,26 @@
+
+$white-color: #fff;
+
+// BACKGROUND COLORS
+$light-color: #fff;
+$dark-color: #000033;
+
+// HEADING COLORS
+$light-text-heading: #272341; 
+$dark-text-heading: #FFF;
+
+// PRIMARY COLORS
+$light-primary-color: #0076ff; // hsl(222, 43%, 51%)
+$light-primary: 0;
+$dark-primary-color: #ff9900;
+
+// SECONDARY COLORS
+$light-secondary-color: #182848;
+$dark-secondary-color: invert($light-secondary-color, 50%);
+
+$dark-grey: #333333;
+
+// FONT SIZE
+$default-font-size: 1.6rem;
+$big-font-size: 4rem;
+$mid-font-size: 2.5rem;
