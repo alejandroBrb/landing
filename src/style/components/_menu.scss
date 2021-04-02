@@ -1,0 +1,58 @@
+#menu {
+  width: 100%;
+  position: absolute;
+  position: fixed;
+  padding: 3rem 5.6rem;
+
+  @include respond(phone) {
+    padding: 1rem 0rem
+  }
+
+  .nav-bar {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+
+  .nav {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+
+    a:hover{
+      color: var(--color-text);
+    }
+
+    p:after {    
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 3px;
+      left: 50%;
+      background: var(--color-primary);
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    p:hover:after { 
+      width: 100%; 
+      left: 0%; 
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+
+      p {
+        font-size: $big-font-size;
+      }
+    }
+  }
+}
+
+.navbar-light .navbar-toggler {
+  border-color: none !important;
+  color: var(--color-text)  !important;
+}

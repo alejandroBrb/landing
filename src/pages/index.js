@@ -9,9 +9,9 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Alejandro Barba | About me</title>
+        <title>Alejandro Barba | Home</title>
         <html lang={'en'} />
-        <meta name="description" content={"Personal portafolio"} />
+        <meta name="description" content="Personal portafolio" />
       </Helmet>
       <App />
     </>
