@@ -8,11 +8,23 @@
     padding: 1rem 0rem
   }
 
+  .btn-menu {
+    background-color: transparent;
+    border: none;
+    height: 5rem;
+    width: 5rem;
+
+    .icon-menu {
+      fill: var(--color-text);
+    }
+  }
+
   .nav-bar {
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
+
   }
 
   .nav {

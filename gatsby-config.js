@@ -20,6 +20,17 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /resources/,
+          options: {
+            filters: [value => console.log(value)]
+          }
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Alejandro Barba | About me`,
