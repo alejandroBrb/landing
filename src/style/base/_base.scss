@@ -1,3 +1,5 @@
+@import "./../abstracts/_variables.scss";
+
 html {
   font-size: 62.5%;
 }
@@ -7,8 +9,9 @@ body {
   --color-heading: #{$light-text-heading};
   --color-primary: #{$light-primary-color};
   --color-secondary: #{$light-secondary-color};
-
   --color-text: #{$dark-color};
+  --color-icons: #{$dark-color};
+  --color-icons-hover: #{$hover-dark-color};
 
   background-color: var(--color-page-background);
   font-family: 'Montserrat', sans-serif;
@@ -22,5 +25,7 @@ body {
     --color-primary: #{$dark-primary-color};
     --color-secondary: #{$dark-secondary-color};
     --color-text: #{$light-color};
+    --color-icons: #{$light-color};
+    --color-icons-hover: #{$hover-light-color};
   }
 }
