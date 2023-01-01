@@ -8,7 +8,7 @@ body {
   --color-primary: #{$light-primary-color};
   --color-secondary: #{$light-secondary-color};
 
-  --color-text: #{$light-color};
+  --color-text: #{$dark-color};
 
   background-color: var(--color-page-background);
   font-family: 'Montserrat', sans-serif;
@@ -21,6 +21,6 @@ body {
     --color-heading: #{$dark-text-heading};
     --color-primary: #{$dark-primary-color};
     --color-secondary: #{$dark-secondary-color};
-    --color-text: #{$dark-color};
+    --color-text: #{$light-color};
   }
 }

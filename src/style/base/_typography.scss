@@ -8,6 +8,7 @@ p,
 a {
   font-family: 'Montserrat', sans-serif;
   font-size: $default-font-size;
+  color: var(--color-text)
 }
 
 a,
@@ -54,4 +55,9 @@ a:hover {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+.bold {
+  font-weight: 500;
 }

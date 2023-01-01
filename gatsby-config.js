@@ -20,15 +20,26 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /resources/,
+          options: {
+            filters: [(value) => console.log(value)],
+          },
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Alejandro Barba | About me`,
+        short_name: `albrb`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#02aab0`,
+        theme_color: `#0076ff`,
         display: `standalone`,
-        icon: 'src/images/favicon.png',
+        icon: "src/images/favicon.png",
       },
     },
   ],
