@@ -1,3 +1,5 @@
+@import "./../abstracts/_variables.scss";
+
 .hamburger-menu {
   position: relative;
 }
@@ -16,7 +18,7 @@
   display: block;
   width: 25px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--color-icons);
   border-radius: 2px;
   position: absolute;
   top: 50%;
@@ -30,7 +32,7 @@
   display: block;
   width: 25px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--color-icons);
   border-radius: 2px;
   position: absolute;
 }
@@ -71,14 +73,31 @@
 .menu-link {
   display: block;
   margin: 20px 0;
-  font-size: 22px;
-  color: #fff;
+  font-size: $big-font-size;
+  font-weight: 700;
+  color: white;
   text-decoration: none;
   transition: color 0.5s;
 }
 
 .menu-link:hover {
   color: #ccc;
+}
+
+.menu-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  background: var(--color-primary);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.menu-link:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 #menu-toggle:checked ~ .menu-overlay {
@@ -93,7 +112,7 @@
   right: 20px;
   background-color: transparent;
   border: 0;
-  color: #fff;
+  color: var(--color-icons);
   font-size: 14px;
   cursor: pointer;
 }
