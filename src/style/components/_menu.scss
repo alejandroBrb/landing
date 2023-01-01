@@ -1,70 +1,119 @@
-#menu {
-  width: 100%;
-  position: absolute;
-  position: fixed;
-  padding: 3rem 5.6rem;
-
-  @include respond(phone) {
-    padding: 1rem 0rem
-  }
-
-  .btn-menu {
-    background-color: transparent;
-    border: none;
-    height: 5rem;
-    width: 5rem;
-
-    .icon-menu {
-      fill: var(--color-text);
-    }
-  }
-
-  .nav-bar {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-
-  }
-
-  .nav {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-
-    a:hover{
-      color: var(--color-text);
-    }
-
-    p:after {    
-      background: none repeat scroll 0 0 transparent;
-      bottom: 0;
-      content: "";
-      display: block;
-      height: 3px;
-      left: 50%;
-      background: var(--color-primary);
-      transition: width 0.3s ease 0s, left 0.3s ease 0s;
-      width: 0;
-    }
-
-    p:hover:after { 
-      width: 100%; 
-      left: 0%; 
-    }
-
-    @include respond(phone) {
-      flex-direction: column;
-
-      p {
-        font-size: $big-font-size;
-      }
-    }
-  }
+.hamburger-menu {
+  position: relative;
 }
 
-.navbar-light .navbar-toggler {
-  border-color: none !important;
-  color: var(--color-text)  !important;
+.menu-button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hamburger-icon:before,
+.hamburger-icon:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.hamburger-icon:before {
+  top: -8px;
+}
+
+.hamburger-icon:after {
+  top: 8px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.menu-link {
+  display: block;
+  margin: 20px 0;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.menu-link:hover {
+  color: #ccc;
+}
+
+#menu-toggle:checked ~ .menu-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #ccc;
+}
+
+.menu-overlay.closed {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.menu-overlay.open {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.close-icon {
+  fill: white;
 }

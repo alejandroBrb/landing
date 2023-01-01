@@ -20,15 +20,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
           include: /resources/,
           options: {
-            filters: [value => console.log(value)]
-          }
-        }
-      }
+            filters: [(value) => console.log(value)],
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -39,7 +39,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#0076ff`,
         display: `standalone`,
-        icon: 'src/images/favicon.png',
+        icon: "src/images/favicon.png",
       },
     },
   ],

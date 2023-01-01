@@ -1,33 +1,33 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Icon from '../resources/menu.svg';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import Icon from "../resources/close.svg";
 
 const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section id="menu">
-      <Container>
-        <Navbar expand="lg" className="nav-bar">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" bsPrefix="btn-menu">
-            <Icon className="icon-menu"/>
-          </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="nav">
-              <p className="bold mx-4">
-                <Link to="/about" >
-                  About
-                </Link>
-              </p>
-            <p className="bold mx-4">
-              <Link to="/work">
-                Work
-              </Link>
-            </p>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </Container>
-    </section>
+    <div className="hamburger-menu">
+      <label
+        htmlFor="menu-toggle"
+        className="menu-button"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="hamburger-icon"></span>
+      </label>
+      <div className={`menu-overlay ${isOpen ? "open" : "closed"}`}>
+        <nav className="menu-items">
+          <Link to="/about" className="menu-link">
+            About
+          </Link>
+          <Link to="/work" className="menu-link">
+            Work
+          </Link>
+        </nav>
+        <button className="close-button" onClick={() => setIsOpen(false)}>
+          <Icon className="close-icon" />
+        </button>
+      </div>
+    </div>
   );
 };
 
