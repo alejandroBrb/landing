@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "gatsby";
-import { Helmet } from "react-helmet";
-import { Container } from "react-bootstrap";
-import Fade from "react-reveal/Fade";
-import Menu from "../components/Menu";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
+import Menu from '../components/Menu';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import "../style/main.scss";
+import '../style/main.scss';
 
 export default () => {
   return (
@@ -14,7 +14,7 @@ export default () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Alejandro Barba | Work</title>
-        <html lang={"en"} />
+        <html lang="en" />
         <meta name="description" content="Page not found" />
       </Helmet>
       <Menu />
