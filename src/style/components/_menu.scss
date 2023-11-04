@@ -1,4 +1,4 @@
-@import "./../abstracts/_variables.scss";
+@import './../abstracts/_variables.scss';
 
 .hamburger-menu {
   position: relative;
@@ -28,7 +28,7 @@
 
 .hamburger-icon:before,
 .hamburger-icon:after {
-  content: "";
+  content: '';
   display: block;
   width: 25px;
   height: 2px;
@@ -87,7 +87,7 @@
 .menu-link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 3px;
   left: 50%;

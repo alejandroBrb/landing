@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
-import Fade from "react-reveal/Fade";
+import React, { useState, useEffect } from 'react';
+import { Container } from 'react-bootstrap';
+import Fade from 'react-reveal/Fade';
 
 const Header = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -19,20 +19,14 @@ const Header = () => {
   return (
     <section id="hero" className="jumbotron">
       <Container>
-        <Fade
-          left={isDesktop}
-          bottom={isMobile}
-          duration={1000}
-          delay={500}
-          distance="30px"
-        >
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title no-select">
             {"Hi I'm "}
-            <span className="text-color-main">{"Alejandro Barba,"}</span>
+            <span className="text-color-main">Alejandro Barba,</span>
             <br />
-            {"a "}
-            <span className="text-color-main">{"Software Engineer"}</span>
-            {" based in Guadalajara, Mx"}
+            {'a '}
+            <span className="text-color-main">Software Engineer</span>
+            {' based in Guadalajara, Mx'}
           </h1>
         </Fade>
       </Container>
